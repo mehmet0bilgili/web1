@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>mini-ödev</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    <label>Alıcı Adı</label>
+    <input type="text">
+    <label>Alıcı Cari Kod</label>
+    <input type="text">
+    <label>Teslim İçin Özel Kod</label>
+    <input type="text">
+    <label>Teslim Şekli</label>
+    <select>
+      <option>Elden</option>
+      <option>Kargo</option>
+    </select>
+    <label>Satıcı</label>
+    <select>
+      <option>Apple</option>
+      <option>Vestel</option>
+      <option>Kardeşler</option>
+      <option>Assos</option>
+    </select>
+    <label>Banka</label>
+    <select>
+      <option>Akbank</option>
+      <option>Vakıfbank</option>
+      <option>Karadenizbank</option>
+      <option>Avea</option>
+    </select>
+
+    <br>
+
+    <div id="tableDiv" style="padding-top: 30px;">
+      <table id="myTable">
+        <thead>
+          <tr>
+            <th>Seçimler</th>
+            <th>Ölçüler</th>
+            <th>Diğer Seçimler</th>
+            <th>Toplam Adet</th>
+            <th>Birim (Ölçü)</th>
+            <th>Fiyat</th>
+            <th>Birim (Para)</th>
+            <th>Toplam</th>
+            <th width="50px">
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul class="seçimlerUl">
+                <li><label>Marka:</label>
+                  <select>
+                    <option>Adidas</option>
+                    <option>Nike</option>
+                  </select>
+                </li>
+                <li>
+                  <label>Beden:</label>
+                  <select>
+                    <option>S</option>
+                    <option>M</option>
+                  </select>
+                </li>
+                <li>
+                  <label>Ürün Cinsi:</label>
+                  <select>
+                    <option>Pamuklu</option>
+                    <option>Naylon</option>
+                  </select>
+                </li>
+                <li>
+                  <label>İçerikler:</label>
+                  <select>
+                    <option>A</option>
+                    <option>A, B</option>
+                  </select>
+                </li>
+                <li>
+                  <label>Ambalaj:</label>
+                  <select>
+                    <option>Bilgili Ambalaj</option>
+                    <option>Özdamar Ambalaj</option>
+                  </select>
+                </li>
+              </ul>
+            </td>
+
+            <td>
+              hsıhdaıuh
+            </td>
+
+
+              <td id="myTd">
+                  <button onclick="addLittle(this)">EKLE</button>
+                  <div id="myOtherDiv" style="padding-top: 5px;">
+                    <ul class="diğerSeçimlerUl">
+                      <li>
+                        <select>
+                          <option>Grup Yok</option>
+                          <option>A</option>
+                          <option>B</option>
+                        </select>
+                      </li>
+                      <li>
+                        <select>
+                          <option>Desen Yok</option>
+                          <option>Kareli</option>
+                          <option>Çizgili</option>
+                        </select>
+                      </li>
+                      <li>
+                        <select>
+                          <option>Renk Yok</option>
+                          <option>Kırmızı</option>
+                          <option>Beyaz</option>
+                        </select>
+                      </li>
+                      <li><input type="text" class="count" oninput="add_count(this)"></li>
+                      <li><button onclick="removeLittle(this)">SİL</button></li>
+                    </ul>
+                  </div>
+              </td>
+
+
+              <td>
+              </td>
+
+
+
+            <td>
+              <select>
+                <option>Metrik Sistem</option>
+                <option>İnçlik Sistem</option>
+              </select>
+            </td>
+            <td>
+              <input type="text" id="price" oninput="calculate_price(this)">
+            </td>
+            <td>
+              <select>
+                <option>Türk Lirası</option>
+                <option>Amerikan Doları</option>
+              </select>
+            </td>
+            <td>
+
+            </td>
+            <td>
+              <button class="success" onclick="addTable(this)">
+                ADD
+              </button>
+              <button onclick="removeTable(this)">
+                DELETE
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
