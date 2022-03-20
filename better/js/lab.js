@@ -1,10 +1,13 @@
 function appendProduct() {
+
   var prdct = "<div class='product'>\
   <div class='a'>\
   <ul>\
   <label>Seçimler</label>\
   <li><select><option>Marka Yok</option><option>Adidas</option><option>Nike</option><option>Puma</option></select></li>  \
   <li><select><option>Beden Yok</option><option>XL</option><option>L</option></select></li> \
+  <li><select class='mselect' multiple='' style='width: 300px;'>\
+  <option>Mustard</option><option>Ketchup</option><option>Relish</option></select></li>\
   </ul>\
   </div>\
   <div class='a diger'> \
@@ -23,8 +26,14 @@ function appendProduct() {
   </div>\
   </div>";
 
+  //$('.mselect').chosen(); something interesting
   $("body").append(prdct);
 }
+
+$(document).ready(function(){
+  console.log("it works");
+  $('.mselect').chosen();
+})
 
 function removeProduct(This) {
   $(This.closest('.product')).remove();
@@ -76,6 +85,7 @@ $('body').on('click', '.appendOther', function(){
     let $price = $(this).val();
     $(this).parent().parent().find('.totalPrice').val(+$price * +$totalAmount);*/
     calculateTotalPrice($(this).closest('.product'));
+    console.log($(this).closest('.product').find('.selectpicker').val());
     //$(this).parent().parent().remove();
     //console.log($(this).parent().parent().parent().parent().find('.price').val());
     //$(this).parent().parent().parent().parent().remove();
